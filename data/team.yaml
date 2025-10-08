@@ -1,0 +1,107 @@
+# -----------------------------------------------------------------------------
+# Team data file for the project
+#
+# Structure:
+#   - Each top-level entry defines a "role" or group within the project team.
+#   - Under each role, the "members" key lists one or more team members.
+#
+# Fields:
+#   role:           Name of the group or role.
+#                   Accepted values: "pi" (principal investigator) or
+#                                     "researcher"
+#   members:        List of member entries for that role
+#
+# Each member entry supports the following fields:
+#   name:           Full name of the member (required)
+#   affiliation:    Institutional or research group affiliation (optional)
+#   image:          Path to the member’s photo (optional, relative to or /assets)
+#   links:          List of key-value pairs for external links (optional)
+#                   Common keys: email, orcid, gscholar
+#
+# Example:
+# - role: "researcher"
+#   members:
+#     - name: "John Doe"
+#       affiliation: "University XXX"
+#       image: "img/team/john.webp"
+#       links:
+#         - email: "john.doe@university.edu"
+#         - link: "https://www.example.com"
+#         - orcid: "0000-0000-0000-0000"
+#         - google-scholar: "XXXXXXXXXXXX"
+#
+# -----------------------------------------------------------------------------
+
+- role: "pi"
+  members:
+    - name: "Vicente Matellán Olivera"
+      affiliation: "Universidad de León"
+      image: "img/team/vicente.jpg"
+      links:
+        #- email: "vmato@unileon.es"
+        #- orcid: "0000-0001-7844-9658"
+
+    - name: "Ángel Manuel Guerrero Higueras"
+      affiliation: "Universidad de León"
+      image: "img/team/angel.jpg"
+      links:
+        #- email: "am.guerrero@unileon.es"
+        #- orcid: "0000-0001-8277-0700"
+
+- role: "researcher"
+  members:
+    - name: "Camino Fernández Llamas"
+      affiliation: "Universidad de León"
+      image: "img/team/camino.jpg"
+      links:
+        #- email: "camino.fernandez@unileon.es"
+        #- orcid: "0000-0002-8705-4786"
+
+    - name: "Manuel Castejón Limas"
+      affiliation: "Universidad de León"
+      image: "img/team/manolo.jpg"
+      links:
+        #- email: "manuel.castejon@unileon.es"
+        #- orcid: "0000-0002-5152-4555"
+
+    - name: "Adrián Campazas Vega"
+      affiliation: "Universidad de León"
+      image: "img/team/adrian.jpg"
+      links:
+        #- email: "acamv@unileon.es"
+        #- orcid: "0000-0001-8237-5962"
+
+    - name: "Alexis Gutiérrez Fernández"
+      affiliation: "Universidad de León"
+      image: "img/team/alexis.jpg"
+      links:
+        #- email: "alexis.gutierrez@unileon.es"
+        #- orcid: "0000-0002-3173-3720"
+
+    - name: "Virginia Riego del Castillo"
+      affiliation: "Universidad de León"
+      image: "img/team/virginia.jpg"
+      links:
+        #- email: "vriec@unileon.es"
+        #- orcid: "0000-0003-3389-0786"
+
+    - name: "Claudia Álvarez Aparicio"
+      affiliation: "Universidad de León"
+      image: "img/team/claudia.jpg"
+      links:
+        #- email: "calvaa@unileon.es"
+        #- orcid: "0000-0002-7465-8054"
+
+    - name: "Miguel Ángel González Santamarta"
+      affiliation: "Universidad de León"
+      image: "img/team/santamarta.jpg"
+      links:
+        #- email: "mgons@unileon.es"
+        #- orcid: "0000-0002-7658-8600"
+
+    - name: "Gonzalo Esteban Costales"
+      affiliation: "Universidad de Zaragoza"
+      image: "img/team/gonzalo.jpg"
+      links:
+        #- email: "g.esteban@unizar.es"
+        #- orcid: "0000-0003-3645-164X"

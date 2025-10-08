@@ -1,0 +1,27 @@
+{{/*
+  Shortcode for rendering the author's social or external links with icons.
+
+  The links are read from the site parameters defined in the configuration
+  file (languages.en.toml) under `[params.author] section`.
+*/}}
+
+<div class="mt-3 mb-10 text-2xl">
+{{ with .Site.Params.Author.links }}
+  <div class="flex flex-wrap">
+    {{ range $links := . }}
+      {{ range $name, $url := $links }}
+          <a
+            class="px-1 hover:text-primary-400 text-primary-800 dark:text-primary-200"
+            href="{{ $url }}"
+            target="_blank"
+            aria-label="{{ $name | title }}"
+            rel="me noopener noreferrer"
+            >{{ partial
+              "icon.html" $name
+            }}</a
+          >
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}
+</div>

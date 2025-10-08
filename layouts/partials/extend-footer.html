@@ -1,0 +1,22 @@
+{{/*
+  Partial for rendering funding information in the site footer
+
+  Displays the funding acknowledgement text and/or the funding logos
+  if defined in the site parameters
+
+  Site parameters:
+    - fundingText: short text describing the funding or grant
+    - fundingLogo: path to an image file (e.g., located under assets/img/)
+*/}}
+
+{{- if or .Site.Params.fundingText .SiteParams.fundingLogo -}}
+<div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 py-10">
+  {{- with .Site.Params.fundingText -}}
+    <small class="text-sm text-neutral-500 text-center md:text-left">{{ . }}</small>
+  {{ end }}
+  {{- with .Site.Params.fundingLogo -}}
+    {{- $logoURL := resources.Get . -}}
+    <img src='{{ $logoURL.RelPermalink }}' alt="Funding logos" class="my-0 w-auto max-h-10 md:max-h-12 object-contain" />
+  {{ end }}
+</div>
+{{ end }}

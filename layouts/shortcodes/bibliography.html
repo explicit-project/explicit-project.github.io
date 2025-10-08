@@ -1,0 +1,17 @@
+{{/*
+  Shortcode to render a list of bibliography entries by calling the
+  corresponding partial
+
+  Parameters:
+    - src: path or identifier of the bibliography data file.
+    - type (optional): specifies the type of entries to display
+                       (e.g., publication, dataset, etc.).
+*/}}
+
+{{/* Handle parameters */}}
+{{ $file := .Get "src" }}
+{{ $data := index .Site.Data $file }}
+{{ $type := .Get "type" }}
+
+{{/* Call partial to render the bibliography */}}
+{{ partial "bibliography.html" (dict "data" $data "bibType" $type) }}

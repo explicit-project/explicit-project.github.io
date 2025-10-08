@@ -1,0 +1,17 @@
+{{/*
+  Shortcode for rendering the team members of the project.
+
+  It loads data from the `data/team.yml` (or `.json`, `.toml`) file and
+  displays each member's information (name, affiliation, photo, etc.)
+
+  Parameters:
+      - role (optional): specifies the name of the group or role to display
+                         (e.g., pi or researcher).
+*/}}
+
+{{/* Handle parameters */}}
+{{ $data := index .Site.Data.team }}
+{{ $role := .Get "role" }}
+
+{{/* Call partial to render the team */}}
+{{ partial "team.html" (dict "data" $data "role" $role) }}

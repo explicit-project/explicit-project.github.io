@@ -1,0 +1,56 @@
+# -----------------------------------------------------------------------------
+# Publications and research outputs data file for the project
+#
+# Structure:
+#   - Each entry represents a single research output (publication, dataset,
+#     software repository, press coverage, etc.).
+#
+# Fields:
+#   type:        Type of output (required)
+#                Accepted values: "journal", "conference", "dataset",
+#                "repository", "press"
+#
+#   title:       Full title of the publication or output (required)
+#   authors:     Comma-separated list of authors (required)
+#   year:        Year of publication or release (required)
+#   venue:       Journal name, conference title, or source (optional)
+#   volume:      Volume of the journal (optional)
+#   number:      Issue or paper number (optional)
+#   pages:       Page range (optional)
+#
+#   doi:         DOI identifier (optional, without "https://doi.org/")
+#   pdf:         Link to a local or external PDF file (optional)
+#   url:         External URL (e.g., publisher page, dataset site, or
+#                repository) (optional)
+#
+# Example:
+# - type: "journal"
+#   title: "EXPLICIT"
+#   authors: "Jane Smith, John Doe, Alice Brown"
+#   year: 2025
+#   venue: "Journal of Autonomous Systems"
+#   volume: 12
+#   number: 3
+#   pages: "45–58"
+#   doi: "10.1234/jas.2024.5678"
+#   pdf: "files/papers/explicit_jas2024.pdf"
+#   url: "https://doi.org/10.1234/jas.2024.5678"
+#
+# -----------------------------------------------------------------------------
+
+- type: "conference"
+  title: "Definiendo el concepto de explicación: propuesta de una taxonomía para explicabilidad"
+  authors: David Sobrín Hidalgo; Ángel Manuel Guerrero Higueras; Francisco Javier Rodríguez Lera; Vicente Matellán Olivera
+  year: 2025
+  venue: "Actas de las X Jornadas Nacionales de Investigación en Ciberseguridad"
+  pages: "50-57"
+  pdf: "https://drive.google.com/file/d/1dRIn1-VTiaga2PStzTcvvDcw0bDCS2Ux/view"
+  url: "https://dialnet.unirioja.es/servlet/articulo?codigo=10228848"
+
+- type: "journal"
+  title: "Pyramidal Explainability for Convolutional Neural Networks"
+  authors: "Virginia Riego del Castillo; Lidia Sánchez González"
+  year: 2025
+  venue: "SSRN"
+  doi: "10.2139/ssrn.5379210"
+  url: "https://ssrn.com/abstract=5379210"

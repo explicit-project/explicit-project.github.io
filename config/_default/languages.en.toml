@@ -1,0 +1,37 @@
+# -- English Language Configuration --
+
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "EXPLICIT"
+contentDir = "content/en"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "img/logos/project.png"
+  secondaryLogo = "img/logos/project-second.png"
+  description = "EXPLICIT project explores accountability and explainability in cyber-physical systems, focusing on safety and trust in robots and autonomous vehicles."
+  copyright = "© { year }. Grupo de Robótica – Universidad de León"
+  # *** Funding stuff... ***
+  fundingText = "Grant PID2024-162298OB-I00 funded by MICIU/AEI/10.13039/501100011033 and by the European Union."
+  fundingLogo = "img/logos/funding.jpg"
+
+[params.author]
+  name = "sElf-eXPLaInable Cyber-physIcal sysTems (EXPLICIT)"
+#  email = "vmato@unileon.es"
+  image = "img/logos/avatar.png"
+  imageQuality = 96
+  headline = "Security and safety in autonomous agents"
+#  links = [
+#     { email = "mailto:vmato@unileon.es" },
+#     { link = "https://robotica.unileon.es/" },
+#     { github = "https://github.com/explicit-project" },
+#     { instagram = "https://instagram.com/roboticaunileon" },
+#     { linkedin = "https://www.linkedin.com/in/grupo-robótica-universidad-de-leon" },
+#     { x-twitter = "https://x.com/roboticaunileon" },
+#     { youtube = "https://www.youtube.com/@roboticaunileon" },
+#   ]

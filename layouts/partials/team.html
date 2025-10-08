@@ -1,0 +1,60 @@
+{{/*
+  Partial for rendering grouped team members from data/team.yml.
+
+  Parameters:
+    - data: a list of preloaded people (e.g. from a YAML data source).
+    - role (optional): used to filter members by type.
+*/}}
+
+{{/* Extract parameters */}}
+{{ $people := sort (index . "data") }}
+{{ $role := index . "role" }}
+
+{{ range $people }}
+  {{/* Only render people from given role */}}
+  {{ if or (not $role) (eq (lower .role) (lower $role)) }}
+    <section class="max-w-full mt-6 prose dark:prose-invert">
+      <div class="mx-auto max-w-7xl lg:px-8 xl:grid-cols-3">
+        <ul role="list" class="grid sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+          {{/* Render member data */}}
+          {{ range $member := .members }}
+            <li class="flex author">
+                {{/* Avatar */}}
+                {{ $imgPath := default "img/team/default.png" $member.image }}
+                {{ $avatar := resources.Get $imgPath }}
+                <img class="nozoom !mt-0 !mb-0 h-24 w-24 rounded-full me-4" src="{{ $avatar.RelPermalink }}" alt="{{ $member.name }}" />
+                {{/* Member data */}}
+                <div class="place-self-center">
+                  <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">{{ $member.name }}</div>
+                  {{ with $member.affiliation }}
+                    <div class="text-sm text-neutral-700 dark:text-neutral:400">{{ $member.affiliation }}</div>
+                  {{ end }}
+                  {{ with $member.email }}
+                    <div class="text-sm text-neutral-700 dark:text-neutral:400">{{ $member.email }}</div>
+                  {{ end }}
+                  {{/* Social links */}}
+                  {{ with $member.links }}
+                    {{ $prefixes := dict "email" "mailto:"
+                                         "orcid" "https://orcid.org/"
+                                         "google-scholar" "https://scholar.google.com/citations?user=" }}
+                    <div class="text-2xl sm:text-lg">
+                      <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+                        {{ range $link := . }}
+                          {{- range $key, $val := $link -}}
+                            {{ $prefix := index $prefixes $key }}
+                            <a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href="{{ $prefix }}{{ $val }}" target="_blank" rel="me noopener noreferrer">
+                              <span class="inline-block align-text-bottom">{{ partial "icon.html" $key }}</span>
+                            </a>
+                          {{- end -}}
+                        {{ end }}
+                        </div>
+                    </div>
+                  {{ end }}
+                </div>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
