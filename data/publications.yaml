@@ -47,6 +47,14 @@
   pdf: "https://drive.google.com/file/d/1dRIn1-VTiaga2PStzTcvvDcw0bDCS2Ux/view"
   url: "https://dialnet.unirioja.es/servlet/articulo?codigo=10228848"
 
+- type: "conference"
+  title: "On-Edge Task Planning with Large Language Models for Service Robotics"
+  authors: Alejandro González-Cantón; Miguel A. González-Santamarta; Francisco J. Rodriguez Lera; Ángel M. Guerrero-Higueras; Irene González-Fernández; Francisco Martín-Rico 
+  year: 2025
+  pages: "354–365"
+  pdf: "https://link.springer.com/content/pdf/10.1007/978-3-032-08462-0.pdf"
+  url: "https://link.springer.com/chapter/10.1007/978-3-032-08462-0_28"
+
 - type: "journal"
   title: "Pyramidal Explainability for Convolutional Neural Networks"
   authors: "Virginia Riego del Castillo; Lidia Sánchez González"
