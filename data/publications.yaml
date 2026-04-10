@@ -40,25 +40,48 @@
 
 - type: "conference"
   title: "Definiendo el concepto de explicación: propuesta de una taxonomía para explicabilidad"
-  authors: David Sobrín Hidalgo; Ángel Manuel Guerrero Higueras; Francisco Javier Rodríguez Lera; Vicente Matellán Olivera
+  authors: "David Sobrín Hidalgo, Ángel Manuel Guerrero Higueras, Francisco Javier Rodríguez Lera, Vicente Matellán Olivera"
   year: 2025
   venue: "Actas de las X Jornadas Nacionales de Investigación en Ciberseguridad"
   pages: "50-57"
-  pdf: "https://drive.google.com/file/d/1dRIn1-VTiaga2PStzTcvvDcw0bDCS2Ux/view"
+  pdf: "https://zaguan.unizar.es/record/161724/files/BOOK-2025-377.pdf#section*.32"
   url: "https://dialnet.unirioja.es/servlet/articulo?codigo=10228848"
 
 - type: "conference"
   title: "On-Edge Task Planning with Large Language Models for Service Robotics"
-  authors: Alejandro González-Cantón; Miguel A. González-Santamarta; Francisco J. Rodriguez Lera; Ángel M. Guerrero-Higueras; Irene González-Fernández; Francisco Martín-Rico 
+  authors: "Alejandro González-Cantón, Miguel A. González-Santamarta, Francisco J. Rodriguez Lera, Ángel M. Guerrero-Higueras, Irene González-Fernández, Francisco Martín-Rico"
   year: 2025
-  pages: "354–365"
-  pdf: "https://link.springer.com/content/pdf/10.1007/978-3-032-08462-0.pdf"
-  url: "https://link.springer.com/chapter/10.1007/978-3-032-08462-0_28"
+  venue: "International Conference on Hybrid Artificial Intelligence (HAIS 2025)"
+  pages: "354-365"
+  doi: "10.1007/978-3-032-08462-0_28"
 
 - type: "journal"
   title: "Pyramidal Explainability for Convolutional Neural Networks"
-  authors: "Virginia Riego del Castillo; Lidia Sánchez González"
+  authors: "Virginia Riego del Castillo, Lidia Sánchez González"
   year: 2025
   venue: "SSRN"
   doi: "10.2139/ssrn.5379210"
-  url: "https://ssrn.com/abstract=5379210"
+
+- type: "journal"
+  title: "Improving Accountability and Explainability in Robots through Encryption, Large Language Models, and Visual Language Models"
+  authors: "Laura Fernández-Becerra, David Sobrín-Hidalgo, Miguel A. González-Santamarta, Ángel Manuel Guerrero-Higueras, Francisco J. Rodríguez Lera, Vicente Matellán Olivera"
+  year: 2026
+  venue: "Logic Journal of the IGPL"
+  volume: 34
+  number: 1
+  doi: "10.1093/jigpal/jzaf016"
+
+- type: "conference"
+  title: "From Telemetry to Explainability: Traceable Robots in the Post-Quantum Era"
+  authors: "David Sobrín Hidalgo, Ángel Manuel Guerrero Higueras, Vicente Matellán Olivera"
+  year: 2026
+  venue: "1st Transparent and Interpretable Robots (TRAIL) Conference"
+  url: "https://sites.google.com/view/trail-conference"
+
+- type: "journal"
+  title: "An approach based on LLMs and VLMs for forensic threat detection in autonomous systems"
+  authors: "David Sobrín Hidalgo, Irene González Fernández, Miguel Ángel González Santamarta, Adrián Campazas Vega, Claudia Álvarez Aparicio, Ángel Manuel Guerrero Higueras, Francisco Javier Rodríguez Lera, Vicente Matellán"
+  year: 2026
+  venue: "Logic Journal of the IGPL"
+  volume: 34
+  number: 1
