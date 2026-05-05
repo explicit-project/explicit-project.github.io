@@ -7,13 +7,18 @@ This repository contains the source code for the **EXPLICIT project website**, b
 ```
 .
 ├── assets/                   # Images, logos, and custom resources
-├── content/                  # Website sections (Home, Project, Publications, Team, Contact)
+├── content/                  # Website sections (Home, News, Project, Publications, Team, Contact)
 │   └── en/                   # Content language (en=english, es=spanish, etc.)
 │       ├── _index.md
 │       ├── project.md
 │       ├── publications.md
 │       ├── team.md
-│       └── contact.md
+│       ├── contact.md
+│       └── news/             # News section (one news post)
+│           ├── _index.md
+│           └── <news-entry>/
+│               ├── index.md
+│               └── featured.jpg
 ├── data/                     # Structured data (team.yml, publications.yml)
 ├── layouts/                  # Custom partials and shortcodes
 ├── static/                   # Static files served directly
@@ -27,12 +32,49 @@ This repository contains the source code for the **EXPLICIT project website**, b
 Website sections are stored in `/content`:
 
 - `_index.md` – Home page content
+- `news/` – News and updates section (list of posts)
 - `project.md` – Project description and details
 - `publications.md` – Publications page (renders content from `data/publications.yaml`)
 - `team.md` – Team page (renders content from `data/team.yaml`)
 - `contact.md` – Contact information
 
 > 💡 Updating these markdown files changes the content and layout of the corresponding pages.
+
+### News Section
+
+The `news` section is organized using **page bundles**, where each news item is stored in its own directory containing the content and associated assets:
+
+```
+content/en/news/<news-entry>/
+                ├── index.md
+                ├── featured.jpg
+                ...
+```
+
+#### Naming Convention
+
+Each news entry directory should follow a consistent and descriptive naming scheme:
+
+```
+YYYY/MM/DD/short-title
+```
+
+For example:
+
+```
+2025/09/01/project-funded
+2026/04/13/conference-presentation
+```
+
+This convention ensures chrological ordering, readability, unique and predictable URLs.
+
+> ⚠️ **The directory name is used as the page slug**, so keep it short, lowercase and hyphen-separated.
+
+#### Content Guidelines
+
+- `index.md` – news content and front matter
+- `featured.jpg` – (optional) used as the main image for previews and listings
+- Additional images or assets can be included in the same directory and referenced relatively
 
 ### Data Files
 

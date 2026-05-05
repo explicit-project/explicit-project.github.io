@@ -27,8 +27,6 @@ enableEmoji = true
 [taxonomies]
   tag = "tags"
   category = "categories"
-  author = "authors"
-  series = "series"
 
 [sitemap]
   changefreq = 'daily'
@@ -39,8 +37,8 @@ enableEmoji = true
   home = ["HTML", "RSS", "JSON"]
 
 [related]
-  threshold = 0
-  toLower = false
+  threshold = 80
+  toLower = true
 
     [[related.indices]]
         name = "tags"
@@ -50,20 +48,5 @@ enableEmoji = true
         name = "categories"
         weight = 100
 
-    [[related.indices]]
-        name = "series"
-        weight = 50
-
-    [[related.indices]]
-        name = "authors"
-        weight = 20
-
-    [[related.indices]]
-        name = "date"
-        weight = 10
-
-    [[related.indices]]
-      applyFilter = false
-      name = 'fragmentrefs'
-      type = 'fragments'
-      weight = 10
+[permalinks]
+news = "/news/:year/:month/:day/:contentbasename/"

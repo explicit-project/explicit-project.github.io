@@ -77,11 +77,3 @@
   year: 2026
   venue: "1st Transparent and Interpretable Robots (TRAIL) Conference"
   url: "https://sites.google.com/view/trail-conference"
-
-- type: "journal"
-  title: "An approach based on LLMs and VLMs for forensic threat detection in autonomous systems"
-  authors: "David Sobrín Hidalgo, Irene González Fernández, Miguel Ángel González Santamarta, Adrián Campazas Vega, Claudia Álvarez Aparicio, Ángel Manuel Guerrero Higueras, Francisco Javier Rodríguez Lera, Vicente Matellán"
-  year: 2026
-  venue: "Logic Journal of the IGPL"
-  volume: 34
-  number: 1
