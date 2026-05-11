@@ -69,6 +69,7 @@
   venue: "Logic Journal of the IGPL"
   volume: 34
   number: 1
+  pages: jzaf016
   doi: "10.1093/jigpal/jzaf016"
 
 - type: "conference"
@@ -77,3 +78,37 @@
   year: 2026
   venue: "1st Transparent and Interpretable Robots (TRAIL) Conference"
   url: "https://sites.google.com/view/trail-conference"
+
+- type: "conference"
+  title: "Toward Trustworthy Humanoid Waiters Integrating Vision-Language-Reasoning for Transparent Interaction and Socially-Aware Navigation"
+  authors: "Jean Chrysostome Mayoko Biong, Vicente Matellán-Olivera, Lidia Sánchez-González"
+  year: 2026
+  venue: "1st Transparent and Interpretable Robots (TRAIL) Conference"
+  url: "https://sites.google.com/view/trail-conference"
+
+- type: "journal"
+  title: "Generating trustworthy and context-aware explanations for autonomous robots using an LLM agent-based RAG architecture"
+  authors: "Laura Fernández-Becerra, Ángel Manuel Guerrero-Higueras, Francisco Javier Rodríguez-Lera, Vicente Matellán Olivera"
+  year: 2026
+  venue: "Expert Systems with Applications"
+  volume: 325
+  number: 1
+  pages: 132631
+  doi: "10.1016/j.eswa.2026.132631"
+
+- type: "conference"
+  title: "ROXIE: Defining a Robotic eXplanation and Interpretability Engine"
+  authors: "Francisco J. Rodríguez-Lera, Miguel Ángel González-Santamarta, Alejandro González-Cantón, Laura Fernández-Becerra, David Sobrín-Hidalgo, Ángel Manuel Guerrero-Higueras, Irene González-Fernández"
+  year: 2026
+  venue: "International Workshop on Casuality, Agents and Large Models (CALM 2025)"
+  pages: 13-30
+  doi: "10.1007/978-3-032-20548-3_2"
+
+- type: "journal"
+  title: "Generating Explanations for Autonomous Robots: A Systematic Review"
+  authors: "David Sobrín-Hidalgo, Ángel Manugel Guerrero-Higueras, Vicente Matellán-Olivera"
+  year: 2025
+  venue: "IEEE Access"
+  volume: 13
+  pages: 20413-20426
+  doi: "10.1109/ACCESS.2025.3535097"
