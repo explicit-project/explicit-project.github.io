@@ -7,14 +7,12 @@ showPagination = false
 +++
 
 {{< lead >}}
-EXPLICIT addresses one of the main challenges in the development of autonomous and intelligent systems: ensuring accountability and explainability in cyber-physical systems such as robots and intelligent vehicles.
+Overview of the EXPLICIT project, including its objectives, technologies, timeline, and funding information.
 {{< /lead >}}
 
 ## Description
 
-{{< alert >}}
-Under construction.
-{{< /alert >}}
+EXPLICIT addresses one of the main challenges in the development of autonomous and intelligent systems: ensuring accountability and explainability in cyber-physical systems such as robots and intelligent vehicles.
 
 ### Project Reference
 
