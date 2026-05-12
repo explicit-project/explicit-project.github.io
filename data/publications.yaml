@@ -112,3 +112,10 @@
   volume: 13
   pages: 20413-20426
   doi: "10.1109/ACCESS.2025.3535097"
+
+- type: "dataset"
+  title: "Dataset to evaluate BCubed (Blockchain-based Black Box) and ACOLYTE (dAta Curation fOr traceabiLity sYsTEm)"
+  authors: "Laura Inyesto-Alonso, Claudia Álvarez-Aparicio, David Sobrín-Hidalgo, Adrián Campazas Vega, Vicente Matellán, Ángel Manuel Guerrero-Higueras"
+  year: 2026
+  venue: "Zenodo"
+  doi: "10.5281/ZENODO.16630060"

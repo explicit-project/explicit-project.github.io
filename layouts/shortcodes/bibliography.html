@@ -6,12 +6,14 @@
     - src: path or identifier of the bibliography data file.
     - type (optional): specifies the type of entries to display
                        (e.g., publication, dataset, etc.).
+    - year (optional): specifies the year of entries to display.
 */}}
 
 {{/* Handle parameters */}}
 {{ $file := .Get "src" }}
 {{ $data := index .Site.Data $file }}
 {{ $type := .Get "type" }}
+{{ $year := .Get "year" }}
 
 {{/* Call partial to render the bibliography */}}
-{{ partial "bibliography.html" (dict "data" $data "bibType" $type) }}
+{{ partial "bibliography.html" (dict "data" $data "bibType" $type "bibYear" $year) }}

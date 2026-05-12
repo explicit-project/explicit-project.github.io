@@ -11,10 +11,10 @@ showPagination = false
 Main outcomes of the EXPLICIT project, including publications, datasets, software tools, and media mentions.
 {{< /lead >}}
 
-## Journals
+## 2026
 
-{{< bibliography src="publications" type="journal" >}}
+{{< bibliography src="publications" year="2026" >}}
 
-## Conferences
+## 2025
 
-{{< bibliography src="publications" type="conference" >}}
+{{< bibliography src="publications" year="2025" >}}

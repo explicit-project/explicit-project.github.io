@@ -5,63 +5,72 @@
     - data: a list of preloaded bibliography entries (e.g. from a YAML
             data source).
     - bibType (optional): used to filter bibliography entries by type.
+    - bibYear (optional): used to filter bibliography entries by year.
 */}}
 
 {{/* Extract parameters */}}
 {{ $bibEntries := sort (index . "data") "year" "desc" }}
-{{ $filter := index . "bibType" }}
+{{ $filterType := index . "bibType" }}
+{{ $filterYear := index . "bibYear" }}
 
 {{/* Define supported entry types and filter by the provided one if set */}}
-{{ $types := cond (and $filter (ne (len $filter) 0))
-                  (slice $filter)
+{{ $types := cond (and $filterType (ne (len $filterType) 0))
+                  (slice $filterType)
                   (slice "journal" "conference" "dataset" "repository" "press")
 }}
 
-{{ range $type := $types }}
-<section class="max-w-full mt-6 prose dark:prose-invert">
-  {{/* Filter bibliography items by current type */}}
-  {{ $filteredBibEntries := where $bibEntries "type" $type }}
-
-  {{/* Display filtered items */}}
-  {{ if gt (len $filteredBibEntries) 0 }}
-
-    {{ $years := slice }}
-    {{ range $filteredBibEntries }}
-      {{ if not (in $years .year) }}
-        {{ $years = $years | append .year }}
-      {{ end }}
+{{/* Define unique years to filter by the provided one if set */}}
+{{ $years := slice }}
+{{ if and $filterYear (ne (len $filterYear) 0) }}
+  {{/* Use only the filtered year */}}
+  {{ $years = slice (int $filterYear) }}
+{{ else }}
+  {{/* Collect unique years */}}
+  {{ range $bibEntries }}
+    {{ if not (in $years .year) }}
+      {{ $years = $years | append .year }}
     {{ end }}
-    {{ $years = sort $years "value" "desc" }}
+  {{ end }}
+  {{ $years = sort $years "value" "desc" }}
+{{ end }}
 
-    {{ range $years }}
-      <h3 class="relative group">{{ . }}</h3>
-      <ul role="list">
-        {{ range $bibEntry := where $filteredBibEntries "year" . }}
-          <li class="mb-6">
-            {{/* Bibliography bibEntry */}}
-            {{ $bibEntry.authors }} ({{ $bibEntry.year }}).
-            <strong>{{ $bibEntry.title }}</strong>. 
-            <em>{{ $bibEntry.venue }}</em>
-            {{- with $bibEntry.volume }}, {{ . }}{{ end -}}
-            {{- with $bibEntry.number }}({{ . }}){{ end -}}
-            {{- with $bibEntry.pages }}, {{ . }}{{ end -}}.
-            {{/* Add badges with links for the resources */}}
-            {{ $resources := slice "doi" "pdf" "url" }}
-            <div class="flex flex-row flex-wrap items-center">
-              {{ range $resource := $resources }}
-                {{ $key := index $bibEntry $resource }}
-                {{ with $key }}
-                  {{ $prefix := cond (eq $resource "doi") "https://doi.org/" "" }}
-                  <a class="relative mt-[0.5rem] me-2" href="{{ $prefix }}{{ . }}" target="_blank" rel="me noopener noreferrer">
-                    {{ partial "badge.html" (upper $resource) }}
-                  </a>
+{{/* Render entries by year */}}
+{{ range $year := $years }}
+<section class="max-w-full mt-6 prose dark:prose-invert">
+  {{/* Render by type within each year */}}
+  {{ range $type := $types }}
+    {{/* Filter bibliography items by current year and type */}}
+    {{ $filteredBibEntries := where (where $bibEntries "year" $year) "type" $type }}
+    {{/* Display filtered items */}}
+    {{ if gt (len $filteredBibEntries) 0 }}
+        <h3 class="mt-4 capitalize">{{ humanize . | pluralize }}</h3>
+        <ul role="list">
+          {{ range $bibEntry := $filteredBibEntries }}
+            <li class="mb-6">
+              {{/* Bibliography bibEntry */}}
+              {{ $bibEntry.authors }} ({{ $bibEntry.year }}).
+              <strong>{{ $bibEntry.title }}</strong>. 
+              <em>{{ $bibEntry.venue }}</em>
+              {{- with $bibEntry.volume }}, {{ . }}{{ end -}}
+              {{- with $bibEntry.number }}({{ . }}){{ end -}}
+              {{- with $bibEntry.pages }}, {{ . }}{{ end -}}.
+              {{/* Add badges with links for the resources */}}
+              {{ $resources := slice "doi" "pdf" "url" }}
+              <div class="flex flex-row flex-wrap items-center">
+                {{ range $resource := $resources }}
+                  {{ $key := index $bibEntry $resource }}
+                  {{ with $key }}
+                    {{ $prefix := cond (eq $resource "doi") "https://doi.org/" "" }}
+                    <a class="relative mt-[0.5rem] me-2" href="{{ $prefix }}{{ . }}" target="_blank" rel="me noopener noreferrer">
+                      {{ partial "badge.html" (upper $resource) }}
+                    </a>
+                  {{ end }}
                 {{ end }}
-              {{ end }}
-            </div>
-          </li>
-        {{ end }} {{/* range bibEntry */}}
-      </ul>
-    {{ end }} {{/* range years */}}
-  {{ end }} {{/* if */}}
+              </div>
+            </li>
+          {{ end }} {{/* range bibEntry */}}
+        </ul>
+    {{ end }} {{/* if */}}
+  {{ end }} {{/* range types */}}
 </section>
 {{ end }} {{/* range types */}}
