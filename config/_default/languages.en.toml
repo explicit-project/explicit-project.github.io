@@ -1,8 +1,8 @@
 # -- English Language Configuration --
 
 disabled = false
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
 weight = 1
 title = "EXPLICIT"
 contentDir = "content/en"

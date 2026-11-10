@@ -11,7 +11,7 @@
 
 {{/* Handle parameters */}}
 {{ $file := .Get "src" }}
-{{ $data := index .Site.Data $file }}
+{{ $data := index hugo.Data $file }}
 {{ $type := .Get "type" }}
 {{ $year := .Get "year" }}
 

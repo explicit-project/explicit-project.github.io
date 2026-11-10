@@ -10,7 +10,7 @@
 */}}
 
 {{/* Handle parameters */}}
-{{ $data := index .Site.Data.team }}
+{{ $data := index hugo.Data.team }}
 {{ $role := .Get "role" }}
 
 {{/* Call partial to render the team */}}
