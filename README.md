@@ -11,6 +11,7 @@ This repository contains the source code for the **EXPLICIT project website**, b
 │   └── en/                   # Content language (en=english, es=spanish, etc.)
 │       ├── _index.md
 │       ├── project.md
+│       ├── deliverables.md
 │       ├── publications.md
 │       ├── team.md
 │       ├── contact.md
@@ -34,6 +35,7 @@ Website sections are stored in `/content`:
 - `_index.md` – Home page content
 - `news/` – News and updates section (list of posts)
 - `project.md` – Project description and details
+- `deliverables.md` – Project deliverable documents
 - `publications.md` – Publications page (renders content from `data/publications.yaml`)
 - `team.md` – Team page (renders content from `data/team.yaml`)
 - `contact.md` – Contact information
