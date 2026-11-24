@@ -138,3 +138,25 @@
   venue: "ROSCon España 2026, Valencia, Spain"
   pages: "October, 27-28"
   url: "https://ros.org.es/roscon2026/ROSConES2026.html"
+
+- type: "conference"
+  title: "Self-Explainable Cyber-Physical Systems, Security and Safety in Autonomous Agents (EXPLICIT)"
+  authors: "Laura Inyesto-Alonso, Claudia Álvarez-Aparicio, Ángel M. Guerrero-Higueras, Miguel Á. González-Santamarta, Adrián Campazas-Vega, Alexis Gutiérrez-Fernández, David Sobrín-Hidalgo, Alberto Miguel-Diez, Francisco J. Rodríguez-Lera, Camino Fernández-Llamas, Vicente Matellán-Olivera"
+  year: 2026
+  venue: "9th Iberian Robotics Conference (ROBOT 2026), Barcelona, Spain"
+  pages: "November, 18-20"
+  url: "https://robot2026.upc.edu/"
+
+- type: "repository"
+  title: "ACOLYTE"
+  authors: "Laura Inyesto-Alonso, Claudia Álvarez-Aparicio, David Sobrín-Hidalgo, Adrián Campazas-Vega, Vicente Matellán-Olivera, Ángel Manuel Guerrero-Higueras"
+  year: 2026
+  venue: "GitHub"
+  url: "https://github.com/uleroboticsgroup/ACOLYTE"
+
+- type: "repository"
+  title: "BCubed"
+  authors: "Laura Inyesto-Alonso, Claudia Álvarez-Aparicio, David Sobrín-Hidalgo, Adrián Campazas-Vega, Vicente Matellán-Olivera, Ángel Manuel Guerrero-Higueras"
+  year: 2026
+  venue: "GitHub"
+  url: "https://github.com/uleroboticsgroup/BCubed"
